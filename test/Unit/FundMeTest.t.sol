@@ -61,7 +61,6 @@ contract FundMeTest is ZkSyncChainChecker, StdCheats, Test {
         assertEq(funder, USER);
     }
 
-
     modifier funded() {
         vm.prank(USER);
         fundMe.fund{value: SEND_VALUE}();
